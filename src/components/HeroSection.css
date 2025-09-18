@@ -1,0 +1,141 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  /* text-shadow: 1px 1px 4px rgba(0,0,0,0.6); */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffba00; /* highlight color */
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile nav active */
+.nav-links.open {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 15px;
+}
+
+/* ========================= */
+/* Hero Section Styles */
+/* ========================= */
+.hero {
+  position: relative;
+  height: 100vh; /* full screen */
+  background: url("/public/bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* shadow for heading */
+}
+
+/* Shadow-like box */
+.certificate-box {
+  background: rgba(0, 0, 0, 0.55); /* semi-transparent black */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+}
+
+.certificate-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.certificate-box p {
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+@media (max-width: 768px) {
+  .big-text {
+    font-size: 2.2rem;
+  }
+
+  .certificate-box {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .certificate-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .certificate-box p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none; /* hide normal nav */
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+}
